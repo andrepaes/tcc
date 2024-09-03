@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+    command: /bin/sh start_server.sh
+    ports:
+      - "4000:4000"
+    deploy:
+      resources:
+        limits:
+          cpus: '10'
+          memory: 5000M

@@ -1,0 +1,122 @@
+
+23:33:08.240 [info] Loading 147 CA(s) from :otp store
+
+23:33:08.297 id=1 [debug] handled request client -> server initialize in 38ms
+
+23:33:08.300 [debug] sent notification server -> client window/logMessage
+
+23:33:08.302 [debug] sent notification server -> client window/logMessage
+
+23:33:08.302 [debug] sent notification server -> client window/logMessage
+
+23:33:08.302 [info] [extension] Credo initializing with options %NextLS.InitOpts.Extensions.Credo{enable: true, cli_options: []}
+
+23:33:08.303 id=517 [debug] sent request server -> client window/workDoneProgress/create
+
+23:33:08.307 [debug] sent notification server -> client $/progress
+
+23:33:08.316 [debug] sent notification server -> client window/logMessage
+
+23:33:08.316 [info] Beginning DB migration...
+
+23:33:08.318 [debug] sent notification server -> client window/logMessage
+
+23:33:08.318 [info] Database is on the latest version: 6
+
+23:33:08.318 [debug] sent notification server -> client window/logMessage
+
+23:33:08.318 [info] Finished DB migration...
+
+23:33:08.318 [debug] sent notification server -> client window/logMessage
+
+23:33:08.318 [info] Booting runtime for elixir_app.
+
+- elixir: /home/andrepaes/.asdf/shims/elixir
+- zombie wrapper script: /home/andrepaes/.local/share/.burrito/next_ls_erts-14.2.1_0.20.2/lib/next_ls-0.20.2/priv/cmd
+- working_dir: /home/andrepaes/tcc/elixir_app
+- command: /home/andrepaes/.asdf/shims/elixir --no-halt --sname nextls-runtime-1725244388318413607 --cookie NWQIY2Q6HI4GUCI6E623JLGQVEC4H6JLD4ZORVW7TK53PIODNXWQ==== -S mix loadpaths --no-compile
+
+Environment: 
+
+LSP=nextls
+NEXTLS_PARENT_PID=g1h3Jm5leHQtbHMtMTcyNTI0NDM4ODI0NjUxMjg2MEBVU0xMQU5EUEFFAAABCAAAAABm1SPl
+MIX_ENV=dev
+MIX_TARGET=host
+MIX_BUILD_ROOT=.elixir-tools/_build
+ROOTDIR=false
+BINDIR=false
+RELEASE_ROOT=false
+RELEASE_SYS_CONFIG=false
+PATH=/home/andrepaes/.local/share/.burrito/next_ls_erts-14.2.1_0.20.2/bin:/home/andrepaes/.local/share/nvim/mason/bin:/home/andrepaes/.asdf/shims:/opt/asdf-vm/bin:/home/andrepaes/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin
+
+
+23:33:08.318 [debug] handled notification client -> server initialized in 19ms
+
+23:33:08.320 [debug] handled notification client -> server textDocument/didOpen in 1ms
+
+23:33:09.336 [debug] sent notification server -> client window/logMessage
+
+23:33:09.336 [info] Connected to node nextls-runtime-1725244388318413607@USLLANDPAE
+
+23:33:09.511 [debug] sent notification server -> client window/logMessage
+
+23:33:09.511 [info]      warning: got "@impl true" for function run/1 but no behaviour was declared
+     │
+ 262 │   def run(args) do
+     │   ~~~~~~~~~~~~~~~~
+     │
+     └─ /home/andrepaes/.local/share/.burrito/next_ls_erts-14.2.1_0.20.2/lib/next_ls-0.20.2/priv/monkey/_next_ls_private_compiler.ex:262: :_next_ls_private_formatter (module)
+
+
+
+23:33:09.511 [debug] sent notification server -> client $/progress
+
+23:33:09.512 [debug] sent notification server -> client window/logMessage
+
+23:33:09.513 id=4 [debug] sent request server -> client window/workDoneProgress/create
+
+23:33:09.515 [debug] sent notification server -> client $/progress
+
+23:33:09.539 [debug] sent notification server -> client window/logMessage
+
+23:33:09.539 [info] Compiling 8 files (.ex)
+
+
+23:33:09.543 id=1285 [debug] sent request server -> client window/workDoneProgress/create
+
+23:33:09.544 [debug] sent notification server -> client $/progress
+
+23:33:09.652 [debug] sent notification server -> client window/logMessage
+
+23:33:09.652 [info] Generated elixir_app app
+
+
+23:33:09.653 [debug] sent notification server -> client $/progress
+
+23:33:09.653 [debug] sent notification server -> client window/logMessage
+
+23:33:09.653 [info] Compiled elixir_app!
+
+23:33:09.747 [debug] sent notification server -> client $/progress
+
+23:33:10.226 [debug] handled notification client -> server textDocument/didChange in 3ms
+
+23:33:10.796 [debug] handled notification client -> server textDocument/didChange in 320µs
+
+23:33:12.056 [debug] handled notification client -> server textDocument/didChange in 352µs
+
+23:33:14.116 id=132 [debug] sent request server -> client window/workDoneProgress/create
+
+23:33:14.116 [debug] handled notification client -> server textDocument/didSave in 2ms
+
+23:33:14.122 [debug] sent notification server -> client $/progress
+
+23:33:14.133 [debug] sent notification server -> client $/progress
+
+23:33:14.133 [debug] sent notification server -> client window/logMessage
+
+23:33:14.133 [info] Compiled elixir_app!
+
+23:38:54.861 [debug] handled notification client -> server textDocument/didChange in 343µs
+
+23:38:55.013 [debug] handled notification client -> server textDocument/didChange in 343µs
