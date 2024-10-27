@@ -8,6 +8,6 @@ defmodule ElixirAppWeb.Router do
   scope "/api", ElixirAppWeb.Controllers do
     pipe_through :api
 
-    get("/test", TestController, :test)
+    get("/primes/verify", PrimeNumberController, :verify)
   end
 end
