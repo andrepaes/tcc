@@ -9,5 +9,6 @@ defmodule ElixirAppWeb.Router do
     pipe_through :api
 
     get("/primes/verify", PrimeNumberController, :verify)
+    get("/primes/:quantity", PrimeNumberController, :get_list)
   end
 end
