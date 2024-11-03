@@ -27,12 +27,15 @@ defmodule HttpBenchmark do
   end
 
   def send_request(:get, url) do
-    {status, time} =
-      :timer.tc(fn ->
-        %{status: status} = Req.get!(url, connect_options: [timeout: :infinity], pool_timeout: :infinity, receive_timeout: :infinity)
-        status
-      end)
+    :timer.tc(fn ->
+      %{status: status} =
+        Req.get!(url,
+          connect_options: [timeout: :infinity],
+          pool_timeout: :infinity,
+          receive_timeout: :infinity
+        )
 
-    {status, time}
+      status
+    end)
   end
 end
