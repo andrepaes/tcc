@@ -12,6 +12,7 @@ defmodule ElixirAppWeb.Controllers.PrimeNumberController do
   end
 
   def verify(conn, %{"number" => number}) do
+
     {integer, _} = Integer.parse(number)
     Primes.is_prime?(integer)
 
