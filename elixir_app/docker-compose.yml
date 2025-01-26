@@ -10,3 +10,4 @@ services:
         limits:
           cpus: '10'
           memory: 5000M
+    network_mode: host
