@@ -1,8 +1,8 @@
 defmodule HttpBenchmark do
-  def run_benchmark(url, quantity_reqs, concurrency) do
+  def run_benchmark(url, quantity_reps, concurrency) do
     {spent_time, {total_success, total_fail, total_time, all_reqs}} =
       :timer.tc(fn ->
-        Enum.reduce(1..quantity_reqs, {0, 0, 0, []}, fn
+        Enum.reduce(1..quantity_reps, {0, 0, 0, []}, fn
           _, acc ->
             Task.async_stream(
               1..concurrency,
@@ -22,13 +22,13 @@ defmodule HttpBenchmark do
         end)
       end)
 
-    samples = quantity_reqs * concurrency
+    samples = quantity_reps * concurrency
 
     mean_time = total_time / samples
     success_rate = total_success / samples
     fail_rate = total_fail / samples
 
-    variance = (Enum.map(all_reqs, &:math.pow(&1 - mean_time, 2)) |> Enum.sum()) / quantity_reqs
+    variance = (Enum.map(all_reqs, &:math.pow(&1 - mean_time, 2)) |> Enum.sum()) / samples
 
     {spent_time, mean_time, success_rate, fail_rate, :math.sqrt(variance)}
   end
