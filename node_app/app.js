@@ -1,8 +1,8 @@
 const cluster = require('cluster');
 const os = require('os');
 const express = require('express');
-const sleep = require('system-sleep');
 const usersRoutes = require('./users')
+const primesRoutes = require('./primes')
 
 const numCPUs = os.availableParallelism();
 const PORT = process.env.PORT || 4000;
@@ -23,6 +23,7 @@ if (cluster.isMaster) {
   const app = express();
 
   app.use(usersRoutes);
+  app.use(primesRoutes);
 
   app.listen(PORT, () => {
     console.log(`Worker process ${process.pid} is listening on port ${PORT}`);
