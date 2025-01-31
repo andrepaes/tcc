@@ -8,7 +8,6 @@ router.get('/api/primes/:quantity', getPrimes, async (req, res) => {
 
 async function getPrimes(req, res, next) {
   const n = req.params.quantity;
-  console.log(n)
   var array_of_primes=[];
   for(var i = 2; i <= n/2; i++){
     if(isPrime(i)) array_of_primes.push(i);
