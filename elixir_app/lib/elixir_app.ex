@@ -25,25 +25,5 @@ defmodule ElixirApp do
         end
       end)
     end
-
-    # def is_prime?(n) do
-    #  half = div(n, 2)
-    #
-    #  Enum.reduce_while(2..half, {true, half}, fn fac, {is_prime, upper_limit} ->
-    #    cond do
-    #      !is_prime ->
-    #        {:halt, {false, fac}}
-    #
-    #      fac > upper_limit ->
-    #        {:cont, {is_prime, upper_limit}}
-    #
-    #      true ->
-    #        is_prime = rem(n, fac) != 0
-    #        upper_limit = if is_prime, do: div(n, fac + 1), else: fac
-    #        {:cont, {is_prime, upper_limit}}
-    #    end
-    #  end)
-    #  |> elem(0)
-    # end
   end
 end
