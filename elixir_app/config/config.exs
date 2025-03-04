@@ -8,8 +8,15 @@
 import Config
 
 config :elixir_app,
-  ecto_repos: [],
+  ecto_repos: [ElixirApp.Repo],
   generators: [timestamp_type: :utc_datetime]
+
+config :elixir_app, ElixirApp.Repo,
+  username: "postgres",
+  password: "postgres",
+  hostname: "localhost",
+  database: "elixir_app_dev",
+  pool_size: 100
 
 # Configures the endpoint
 config :elixir_app, ElixirAppWeb.Endpoint,

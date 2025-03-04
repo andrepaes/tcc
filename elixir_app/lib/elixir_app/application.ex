@@ -8,7 +8,7 @@ defmodule ElixirApp.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      #ElixirAppWeb.Telemetry,
+      ElixirApp.Repo,
       #{DNSCluster, query: Application.get_env(:elixir_app, :dns_cluster_query) || :ignore},
       #{Phoenix.PubSub, name: ElixirApp.PubSub},
       # Start a worker by calling: ElixirApp.Worker.start_link(arg)

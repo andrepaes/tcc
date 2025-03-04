@@ -11,7 +11,7 @@ config :elixir_app, ElixirAppWeb.Endpoint,
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
   http: [ip: {0, 0, 0, 0}, port: 4000],
   check_origin: false,
-  code_reloader: true,
+  code_reloader: false,
   debug_errors: true,
   secret_key_base: "rGgXBaBBNCNjAL1Ty4qzSleskJ+HBdzrDWO7VbNfMwFmGxVzUkWU8t3cCXGaC0y7",
   watchers: []
@@ -40,14 +40,11 @@ config :elixir_app, ElixirAppWeb.Endpoint,
 # different ports.
 
 # Enable dev routes for dashboard and mailbox
-config :elixir_app, dev_routes: true
+config :elixir_app, dev_routes: false
 
 # Do not include metadata nor timestamps in development logs
-config :logger, :console, format: "[$level] $message\n"
+config :logger, :console, format: "[$level] $message\n", level: :error
 
 # Set a higher stacktrace during development. Avoid configuring such
 # in production as building large stacktraces may be expensive.
 config :phoenix, :stacktrace_depth, 20
-
-# Initialize plugs at runtime for faster development compilation
-config :phoenix, :plug_init_mode, :runtime

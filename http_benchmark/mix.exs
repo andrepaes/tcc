@@ -21,7 +21,8 @@ defmodule HttpBenchmark.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:req, "~> 0.5.0"}
+      {:req, "~> 0.5.0"},
+      {:decimal, "~> 2.0"}
     ]
   end
 end

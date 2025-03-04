@@ -30,7 +30,10 @@ defmodule HttpBenchmark do
 
     variance = (Enum.map(all_reqs, &:math.pow(&1 - mean_time, 2)) |> Enum.sum()) / samples
 
-    {spent_time, mean_time, success_rate, fail_rate, :math.sqrt(variance)}
+    {spent_time,
+     Decimal.from_float(mean_time) |> Decimal.div(1000) |> Decimal.round(0) |> Decimal.to_float(),
+     success_rate, fail_rate,
+     Decimal.div(Decimal.from_float(:math.sqrt(variance)), 1000) |> Decimal.round(0) |> Decimal.to_float()}
   end
 
   def send_request(:get, url) do

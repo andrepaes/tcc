@@ -1,8 +1,10 @@
 defmodule ElixirAppWeb.Controllers.UserController do
   use ElixirAppWeb, :controller
 
+  alias ElixirApp.Repo
+
   def index(conn, _) do
-    :timer.sleep(300)
+    Ecto.Adapters.SQL.query(Repo, "select * from users")
 
     conn
     |> send_resp(200, "")
