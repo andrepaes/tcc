@@ -7,6 +7,6 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '8'
+          cpus: '16'
           memory: 16000M
     network_mode: host

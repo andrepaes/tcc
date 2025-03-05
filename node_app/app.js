@@ -3,12 +3,10 @@ const os = require('os');
 const express = require('express');
 const usersRoutes = require('./users')
 const primesRoutes = require('./primes')
-
 const numCPUs = os.availableParallelism();
 const PORT = process.env.PORT || 4000;
 
 if (cluster.isMaster) {
-  console.log(numCPUs)
   console.log(`Master process ${process.pid} is running`);
 
   for (let i = 0; i < numCPUs; i++) {
