@@ -4,7 +4,7 @@ defmodule ElixirAppWeb.Controllers.UserController do
   alias ElixirApp.Repo
 
   def index(conn, _) do
-    Ecto.Adapters.SQL.query(Repo, "select * from users")
+    Ecto.Adapters.SQL.query(Repo, "select id from users")
 
     conn
     |> send_resp(200, "")
