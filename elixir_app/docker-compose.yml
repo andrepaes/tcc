@@ -15,7 +15,7 @@ services:
       resources:
         limits:
           cpus: '8'
-          memory: 16000M
+          memory: 8000M
   app:
     build:
       context: .
