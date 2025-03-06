@@ -16,7 +16,7 @@ config :elixir_app, ElixirApp.Repo,
   password: "postgres",
   hostname: "localhost",
   database: "elixir_app_dev",
-  pool_size: 100
+  pool_size: 50
 
 # Configures the endpoint
 config :elixir_app, ElixirAppWeb.Endpoint,

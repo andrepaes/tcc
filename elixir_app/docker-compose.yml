@@ -10,7 +10,7 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data 
     network_mode: host
-    command: postgres -c 'max_connections=108'
+    command: postgres -c 'max_connections=58'
     deploy:
       resources:
         limits:
@@ -25,7 +25,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '8'
+          cpus: '16'
           memory: 16000M
     network_mode: host
 

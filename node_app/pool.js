@@ -5,7 +5,7 @@ const pool = new pg.Pool({
   database: 'elixir_app_dev',
   password: 'postgress',
   port: 5432,
-  poolSize: 100
+  poolSize: 50
 })
 
 module.exports.query = (text, values) => {
