@@ -7,7 +7,7 @@
 ### Api desenvolida em elixir que implementa os endpoints de gerar lista de numeros primos e recuperar lista de usuarios
 
 
-# Como executar
+# Preparando o ambiente para executar os testes
 ## Caso queira executar os testes na aplicação elixir, fazer o seguinte:
 ```
 cd elixir_app
@@ -20,7 +20,7 @@ cd node_app
 docker-compose up
 ```
 
-
+## Executando os testes:
 ```
 cd http_benchmark
 iex -s mix
